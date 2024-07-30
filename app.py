@@ -310,25 +310,25 @@ def main():
         'Bottom_Fit': fit_bottom_half,
     }
 
-    # Submit button
-    if st.button('Submit'):
-        # Convert dictionary to recommender
-        # table_data = recommender(responses)
-        df = pd.DataFrame([responses])
+    # # Submit button
+    # if st.button('Submit'):
+    #     # Convert dictionary to recommender
+    #     # table_data = recommender(responses)
+    #     df = pd.DataFrame([responses])
         
 
-        # Append data to CSV file
-        csv_file = 'responses.csv'
-        try:
-            existing_df = pd.read_csv(csv_file)
-            df = pd.concat([existing_df, df], ignore_index=True)
-        except FileNotFoundError:
-            df.to_csv(csv_file, index=False)
+    #     # Append data to CSV file
+    #     csv_file = 'responses.csv'
+    #     try:
+    #         existing_df = pd.read_csv(csv_file)
+    #         df = pd.concat([existing_df, df], ignore_index=True)
+    #     except FileNotFoundError:
+    #         df.to_csv(csv_file, index=False)
 
-        df.to_csv(csv_file, index=False)
-        st.success("Responses saved successfully!")
-        st.write("Outfits")
-        recommender(name)
+    #     df.to_csv(csv_file, index=False)
+    #     st.success("Responses saved successfully!")
+    #     st.write("Outfits")
+    #     recommender(name)
 
 
 if __name__ == '__main__':
