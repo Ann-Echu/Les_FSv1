@@ -1,6 +1,6 @@
 import streamlit as st
 
-def app():
+def main():
     st.title('Home')
     st.write('Welcome to Les Fashion secrets')
 

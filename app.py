@@ -1,5 +1,9 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from home import main as home_main
+from about import main as about_main
+from recommendation import main as recommendation_main
+from auth.google_auth import login, callback, logout
 # from user import login
 
 import recommendation
@@ -27,6 +31,7 @@ def run():
     if 'logged_in' not in st.session_state:
         st.session_state.logged_in = False
     
+    # TODO fix st.experimental_get_query_params() => st.query_params
     if 'oauth_token' not in st.session_state and 'code' in st.experimental_get_query_params():
         user_info = callback()
         st.session_state['logged_in'] = True

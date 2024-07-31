@@ -1,0 +1,9 @@
+streamlit
+pandas
+bcrypt
+sqlite3
+authlib
+python-dotenv
+
+# maybe use mongodb, if you dont need to scale
+# if you need to scale, and need a server. 

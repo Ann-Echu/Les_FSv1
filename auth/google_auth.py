@@ -1,5 +1,5 @@
 import streamlit as st
-from authlib.integrations.requests_clients import OAuth2Session
+from authlib.integrations.requests_client import OAuth2Session
 import os
 
 def get_google_auth():
@@ -18,6 +18,7 @@ def login():
 
 def callback():
     google = get_google_auth()
+    # TODO fix st.experimental_get_query_params() => st.query_params
     token = google.fetch_token("https://oauth2.googleapis.com/token", authorization_response=st.experimental_get_query_params())
     user_info = google.get("https://www.googleapis.com/oauth2/v3/userinfo").json()
     return user_info
