@@ -100,20 +100,6 @@ def __recommender(name):
     headers = ["Name", "Number of Matched Outfits"]
     st.write(table_data) #headers=headers, tablefmt="pretty")
 
-# Initialize session state variables
-if 'step' not in st.session_state:
-    st.session_state.step = 0
-if 'responses' not in st.session_state:
-    st.session_state.responses = {}
-
-def next_step():
-    st.session_state.step += 1
-
-def prev_step():
-    st.session_state.step -= 1
-
-def reset_steps():
-    st.session_state.step = 0
 
 # Function to select multiple items
 def select_items(options, key):
@@ -132,6 +118,20 @@ def main():
     """)
     st.write("About you!\nYour information is highly confidential, the following information is for internal research purpose only, all information will not be shared externally.")
     st.divider()
+    # Initialize session state variables
+    if 'step' not in st.session_state:
+        st.session_state.step = 0
+    if 'responses' not in st.session_state:
+        st.session_state.responses = {}
+
+    def next_step():
+        st.session_state.step += 1
+
+    def prev_step():
+        st.session_state.step -= 1
+
+    def reset_steps():
+        st.session_state.step = 0
 
     # Step 1: Basic Information
     if st.session_state.step == 0:
