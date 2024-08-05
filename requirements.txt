@@ -4,6 +4,8 @@ bcrypt
 pymongo
 authlib
 httpx-oauth
+email_validator
+streamlit_authenticator
 
 
 # maybe use mongodb, if you dont need to scale

@@ -1,9 +1,11 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 from home import main as home_main
 from about import main as about_main
 from recommendation import main as recommendation_main
-from auth.google_auth import login, callback, logout
+from contactus import main as contact_main
+from privacy import main as privacy_main
+# from auth.google_auth import login, callback, logout
 
 #TODO: fix login for invalid redirect_uri_mismatch error
 # # Function to handle login
@@ -38,10 +40,11 @@ def run():
     #         st.error("Login failed. Please try again.")
 
     # if st.session_state.logged_in:
-    st.sidebar.title("Navigation")
-    st.sidebar.write(f"Logged in as {st.session_state['email']}")
-    st.sidebar.button("Logout", on_click=logout_page)
-    page = st.sidebar.selectbox("Go to", ["Home", "About", "Recommendation"])
+    st.sidebar.image("static/images/logo1.png", use_column_width=True)
+    # st.sidebar.title("Les Fashion Secrets")
+    # st.sidebar.write(f"Logged in as {st.session_state['email']}")
+    # st.sidebar.button("Logout", on_click=logout_page)
+    page = st.sidebar.selectbox("Navigate to", ["Home", "About", "Recommendation", "Contact Us"])
 
     if page == "Home":
         home_main()
@@ -49,6 +52,10 @@ def run():
         about_main()
     elif page == "Recommendation":
         recommendation_main()
+    elif page == "Contact Us":
+        contact_main()
+    elif page == "Privacy":
+        privacy_main()
     # else:
     #     login_page()
 

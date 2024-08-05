@@ -100,211 +100,223 @@ def __recommender(name):
     headers = ["Name", "Number of Matched Outfits"]
     st.write(table_data) #headers=headers, tablefmt="pretty")
 
+# Initialize session state variables
+if 'step' not in st.session_state:
+    st.session_state.step = 0
+if 'responses' not in st.session_state:
+    st.session_state.responses = {}
+
+def next_step():
+    st.session_state.step += 1
+
+def prev_step():
+    st.session_state.step -= 1
+
+def reset_steps():
+    st.session_state.step = 0
+
+# Function to select multiple items
+def select_items(options, key):
+    return st.multiselect("Select all that apply:", options, key=key)
+
 def main():
     # Create Web-page Layout
     st.header('Les Fashion Secrets')
     st.divider()
-    st.markdown("Hi everyone! Thanks for taking part in our survey.\n\
-                You're helping us out big time – our academic lives depend on it, quite literally!\n\
-                Anyway, this is a brief survey that should only take about 6 minutes of your time.\n\
-                We're collecting data on your fashion preferences and choices to help us build a machine\n\
-                for our Business Intelligence Project. Thank you again for your time.")
-
+    st.markdown("""
+    Hi everyone! Thanks for taking part in our survey.
+    You're helping us out big time – our academic lives depend on it, quite literally!
+    Anyway, this is a brief survey that should only take about 6 minutes of your time.
+    We're collecting data on your fashion preferences and choices to help us build a machine
+    for our Business Intelligence Project. Thank you again for your time.
+    """)
     st.write("About you!\nYour information is highly confidential, the following information is for internal research purpose only, all information will not be shared externally.")
     st.divider()
 
-    # Question about gender
-    st.write("*Please select your gender: ")
-    gender = st.radio(
-        "Choose one:",
-        ('Woman','Man','Non-binary','Prefer not to say','Other')
-    )
-    # handle the other option selected
-    if gender == 'Other':
-        other_gender = st.text_input("Please specify:")
-        gender = other_gender
+    # Step 1: Basic Information
+    if st.session_state.step == 0:
+        with st.container():
+            st.subheader("Step 1: Basic Information")
+            
+            st.write("*Please select your gender: ")
+            gender = st.radio(
+                "Choose one:",
+                ('Woman','Man','Non-binary','Prefer not to say','Other')
+            )
+            if gender == 'Other':
+                other_gender = st.text_input("Please specify:")
+                gender = other_gender if other_gender else gender
 
-    # Age
-    st.write("*How old are you?")
-    age = st.radio(
-        "Choose one:",
-        ('18-24: YoungAdult','25-34: Adult','35-44: MidAdult','45-54: SeniorAdult','55 or over: Senior')
-    )
+            st.write("*How old are you?")
+            age = st.radio(
+                "Choose one:",
+                ('18-24: YoungAdult','25-34: Adult','35-44: MidAdult','45-54: SeniorAdult','55 or over: Senior')
+            )
 
-    # Type of outfits
-    st.write("*What type of outfits do you typically wear for work? ")
-    typical_outfits_list = [
-        'Corporate (e.g., suits, formal attire)',
-        'Semi-Formal (e.g., dress shirts, slacks, skirts)', 
-        'Casual (e.g., jeans, casual tops)', 
-        'Uniform (e.g., scrubs, specific work attire)'
-    ]
-    typical_outfits = select_items(typical_outfits_list, "typical_outfits")
+            if gender and age:
+                if st.button("Next"):
+                    st.session_state.responses['Gender'] = gender
+                    st.session_state.responses['Age'] = age
+                    next_step()
 
-    # Weather they like
-    st.write("*What is the weather like where you are? ")
-    weather_list =['Mild','Cool', 'Hot', 'Warm','Cold']
-    weather = select_items(weather_list, "weather")
+    # Step 2: Work and Weather Preferences
+    elif st.session_state.step == 1:
+        with st.container():
+            st.subheader("Step 2: Work and Weather Preferences")
+            
+            st.write("*What type of outfits do you typically wear for work? ")
+            typical_outfits_list = [
+                'Corporate (e.g., suits, formal attire)',
+                'Semi-Formal (e.g., dress shirts, slacks, skirts)', 
+                'Casual (e.g., jeans, casual tops)', 
+                'Uniform (e.g., scrubs, specific work attire)'
+            ]
+            typical_outfits = select_items(typical_outfits_list, "typical_outfits")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("*What is the weather like where you are? ")
+            weather_list =['Mild','Cool', 'Hot', 'Warm','Cold']
+            weather = select_items(weather_list, "weather")
 
-    st.subheader("Fashion profile")
-    st.markdown("This is where we get to know your fashion choices as an individual")
+            if typical_outfits and weather:
+                if st.button("Next"):
+                    st.session_state.responses['Work_Attire'] = typical_outfits
+                    st.session_state.responses['Weather'] = weather
+                    next_step()
 
-    # How often do you wear casual clothes
-    st.write("How often do you wear casual clothes?")
-    casual = st.radio(
-        "Casual:",
-        ['Rarely', 'Sometimes', 'Often'],
-        horizontal=True
-    )
+            if st.button("Previous"):
+                prev_step()
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+    # Step 3: Fashion Profile
+    elif st.session_state.step == 2:
+        with st.container():
+            st.subheader("Step 3: Fashion Profile")
+            st.markdown("This is where we get to know your fashion choices as an individual")
+            
+            st.write("How often do you wear casual clothes?")
+            casual = st.radio(
+                "Casual:",
+                ['Rarely', 'Sometimes', 'Often'],
+                horizontal=True
+            )
 
-    # Styles you are looking to get into
-    st.write("What styles are you looking to get into? (Select all that apply)")
-    styles_list = [
-        'Grungy', 'Sexy', 'Casual', 'Laidback', 'Classy', 'Showy', 'Colorful',
-        'Formal', 'Bohemian', 'Streetwear', 'All of the above'
-    ]
-    styles = select_items(styles_list, "styles")
+            st.write("What styles are you looking to get into? (Select all that apply)")
+            styles_list = [
+                'Grungy', 'Sexy', 'Casual', 'Laidback', 'Classy', 'Showy', 'Colorful',
+                'Formal', 'Bohemian', 'Streetwear', 'All of the above'
+            ]
+            styles = select_items(styles_list, "styles")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("Which of the following clothing items do you prefer to have or add to your wardrobe? (Select all that apply)")
+            clothing_items_list = [
+                'T-shirts (Graphic tees, plain tees, etc.)',
+                'Shirts (Button-down shirts, dress shirts, flannel shirts, denim shirts, etc.)',
+                'Blouses', 'Sweaters', 'Hoodies', 'Cardigans', 'Blazers',
+                'Jeans (Skinny jeans, bootcut jeans, boyfriend jeans, mom jeans, straight jeans, etc.)',
+                'Pants (Dress pants, wide-leg pants, high-waisted pants, cargo pants, etc.)',
+                'Skirts', 'Shorts', 'Leggings', 'Jumpsuits (Rompers)', 'Mini dresses',
+                'Midi dresses', 'Maxi dresses', 'Bodycon dresses', 'Shift dresses',
+                'Wrap dresses', 'Cocktail dresses', 'Coats (Trench coats, puffer coats, wool coats, etc.)',
+                'Jackets (Leather jackets, denim jackets, etc.)', 'Blazers', 'Sports bras',
+                'Athletic tops (Tank tops, etc.)', 'Athletic shorts', 'Sneakers (Converse, etc.)',
+                'Boots (Ankle boots, knee-high boots, combat boots, etc.)', 'Sandals',
+                'Flats', 'Heels (Pumps, stilettos, block heels, wedges, etc.)', 'Loafers', 'All of the above'
+            ]
+            clothing_items = select_items(clothing_items_list, "clothing_items")
 
-    # Clothing items you prefer to have or add to your wardrobe
-    st.write("Which of the following clothing items do you prefer to have or add to your wardrobe? (Select all that apply)")
-    clothing_items_list = [
-        'T-shirts (Graphic tees, plain tees, etc.)',
-        'Shirts (Button-down shirts, dress shirts, flannel shirts, denim shirts, etc.)',
-        'Blouses', 'Sweaters', 'Hoodies', 'Cardigans', 'Blazers',
-        'Jeans (Skinny jeans, bootcut jeans, boyfriend jeans, mom jeans, straight jeans, etc.)',
-        'Pants (Dress pants, wide-leg pants, high-waisted pants, cargo pants, etc.)',
-        'Skirts', 'Shorts', 'Leggings', 'Jumpsuits (Rompers)', 'Mini dresses',
-        'Midi dresses', 'Maxi dresses', 'Bodycon dresses', 'Shift dresses',
-        'Wrap dresses', 'Cocktail dresses', 'Coats (Trench coats, puffer coats, wool coats, etc.)',
-        'Jackets (Leather jackets, denim jackets, etc.)', 'Blazers', 'Sports bras',
-        'Athletic tops (Tank tops, etc.)', 'Athletic shorts', 'Sneakers (Converse, etc.)',
-        'Boots (Ankle boots, knee-high boots, combat boots, etc.)', 'Sandals',
-        'Flats', 'Heels (Pumps, stilettos, block heels, wedges, etc.)', 'Loafers', 'All of the above'
-    ]
-    clothing_items = select_items(clothing_items_list, "clothing_items")
+            if casual and styles and clothing_items:
+                if st.button("Next"):
+                    st.session_state.responses['Casual'] = casual
+                    st.session_state.responses['Preferred_Styles'] = styles
+                    st.session_state.responses['Clothing_items'] = clothing_items
+                    next_step()
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            if st.button("Previous"):
+                prev_step()
 
-    # Type of bottoms you buy most often
-    st.write("Which type of bottoms do you buy most often?")
-    bottoms_list = ['Trousers', 'Shorts', 'Skirts']
-    bottoms = select_items(bottoms_list, "bottoms")
+    # Step 4: Fit and Style Preferences
+    elif st.session_state.step == 3:
+        with st.container():
+            st.subheader("Step 4: Fit and Style Preferences")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("Which type of bottoms do you buy most often?")
+            bottoms_list = ['Trousers', 'Shorts', 'Skirts']
+            bottoms = select_items(bottoms_list, "bottoms")
 
-    # Type of tops you buy most often
-    st.write("Which type of tops do you buy most often?")
-    tops_list = ['T-shirts', 'Sweaters', 'Sweatshirts', 'Tanks', 'All of the above']
-    tops = select_items(tops_list, "tops")
+            st.write("Which type of tops do you buy most often?")
+            tops_list = ['T-shirts', 'Sweaters', 'Sweatshirts', 'Tanks', 'All of the above']
+            tops = select_items(tops_list, "tops")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("Which type of shoes do you buy most often?")
+            shoes_list = ['Sneakers', 'Boots', 'Sandals', 'Flats', 'Heels', 'All of the above']
+            shoes = select_items(shoes_list, "shoes")
 
-    # Type of shoes you buy most often
-    st.write("Which type of shoes do you buy most often?")
-    shoes_list = ['Sneakers', 'Boots', 'Sandals', 'Flats', 'Heels', 'All of the above']
-    shoes = select_items(shoes_list, "shoes")
+            st.write("What colors do you prefer to wear? (Select all that apply)")
+            colors_list = [
+                'Neutral (Beiges, Black, Browns, Grays, Silver, White)',
+                'Warm (Burgundy, Gold, Orange, Red, Yellow, Pink, Purple)',
+                'Cool (Blue, Green, Navy, Teal)'
+            ]
+            colors = select_items(colors_list, "colors")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("Are there any patterns you prefer to wear?")
+            patterns_list = [
+                'Animals', 'Dice', 'Florals', 'Paisleys', 'Plaids', 'Polka dots', 'Stripes', 'Plain', 'All of the above'
+            ]
+            patterns = select_items(patterns_list, "patterns")
 
-    # Colors you prefer to wear
-    st.write("What colors do you prefer to wear? (Select all that apply)")
-    colors_list = [
-        'Neutral (Beiges, Black, Browns, Grays, Silver, White)',
-        'Warm (Burgundy, Gold, Orange, Red, Yellow, Pink, Purple)',
-        'Cool (Blue, Green, Navy, Teal)'
-    ]
-    colors = select_items(colors_list, "colors")
+            st.write("Are there any fabrics you prefer to wear?")
+            fabrics_list = [
+                'Cotton', 'Denim', 'Silk', 'Faux Fur', 'Leather', 'Wool', 'Faux Leather', 'All of the above'
+            ]
+            fabrics = select_items(fabrics_list, "fabrics")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            if bottoms and tops and shoes and colors and patterns and fabrics:
+                if st.button("Next"):
+                    st.session_state.responses['Bottom_Type'] = bottoms
+                    st.session_state.responses['Top_Type'] = tops
+                    st.session_state.responses['Shoe_Type'] = shoes
+                    st.session_state.responses['Colors'] = colors
+                    st.session_state.responses['Patterns'] = patterns
+                    st.session_state.responses['Fabrics'] = fabrics
+                    next_step()
 
-    # Patterns you prefer to wear
-    st.write("Are there any patterns you prefer to wear?")
-    patterns_list = [
-        'Animals', 'Dice', 'Florals', 'Paisleys', 'Plaids', 'Polka dots', 'Stripes', 'Plain', 'All of the above'
-    ]
-    patterns = select_items(patterns_list, "patterns")
+            if st.button("Previous"):
+                prev_step()
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+    # Step 5: Fit Preferences and Contact Information
+    elif st.session_state.step == 4:
+        with st.container():
+            st.subheader("Step 5: Fit Preferences and Contact Information")
 
-    # Fabrics you prefer to wear
-    st.write("Are there any fabrics you prefer to wear?")
-    fabrics_list = [
-        'Cotton', 'Denim', 'Silk', 'Faux Fur', 'Leather', 'Wool', 'Faux Leather', 'All of the above'
-    ]
-    fabrics = select_items(fabrics_list, "fabrics")
+            st.write("How do you prefer clothes to fit your top half?")
+            fit_top_half_list = ['Tight', 'Fitted', 'Straight', 'Loose', 'Oversize']
+            fit_top_half = select_items(fit_top_half_list, "fit_top_half")
 
+            st.write("How do you prefer clothes to fit your bottom half?")
+            fit_bottom_half_list = ['Tight', 'Fitted', 'Straight', 'Loose', 'Oversize']
+            fit_bottom_half = select_items(fit_bottom_half_list, "fit_bottom_half")
 
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            st.write("State your email address. *")
+            email = st.text_area("Your email: ")
 
+            st.write("State your name.*")
+            name = st.text_area("Your name: ")
 
-    st.subheader("Fit and Style Preferences")
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
+            if fit_top_half and fit_bottom_half and email and name:
+                if st.button("Submit"):
+                    ID = int(random.uniform(90, 1000))
+                    st.session_state.responses.update({
+                        'ID': ID,
+                        'Top_Fit': fit_top_half,
+                        'Bottom_Fit': fit_bottom_half,
+                        'Email': email,
+                        'Name': name
+                    })
+                    st.write("Form Submitted!")
+                    reset_steps()
 
-    # How do you prefer clothes to fit your top half?
-    st.write("How do you prefer clothes to fit your top half?")
-    fit_top_half_list = ['Tight', 'Fitted', 'Straight', 'Loose', 'Oversize']
-    fit_top_half = select_items(fit_top_half_list, "fit_top_half")
-
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # How do you prefer clothes to fit your bottom half?
-    st.write("How do you prefer clothes to fit your bottom half?")
-    fit_bottom_half_list = ['Tight', 'Fitted', 'Straight', 'Loose', 'Oversize']
-    fit_bottom_half = select_items(fit_bottom_half_list, "fit_bottom_half")
-
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Your email address
-    st.write("State your email address. *")
-    email = st.text_area("Your email: ")
-
-    # Add space
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Your name
-    st.write("State your name.*")
-    name = st.text_area("Your name: ")
-
-    ID = int(random.uniform(90, 1000))
-
-    # Dictionary to store all the responses
-    responses = {
-        'ID': ID,
-        'Gender': gender,
-        'Age': age,
-        'Work_Attire': typical_outfits,
-        'Weather': weather,
-        'Casual': casual, 
-        'Preferred_Styles': styles,
-        'Clothing_items': clothing_items,
-        'Bottom_Type': bottoms,
-        'Top_Type': tops,
-        'Shoe_Type': shoes,
-        'Colors': colors,
-        'Patterns': patterns,
-        'Fabrics': fabrics,
-        'Top_Fit': fit_top_half,
-        'Bottom_Fit': fit_bottom_half,
-    }
+            if st.button("Previous"):
+                prev_step()
 
     # # Submit button
     # if st.button('Submit'):

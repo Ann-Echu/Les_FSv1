@@ -2,3 +2,5 @@
 2. Activate it: 
    - Windows:`.\chatpdf\Scripts\activate`
    - Mac: `source chatpdf/bin/activate'
+
+3. Install Requirements
