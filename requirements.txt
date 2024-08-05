@@ -1,0 +1,10 @@
+streamlit
+pandas
+bcrypt
+pymongo
+authlib
+httpx-oauth
+
+
+# maybe use mongodb, if you dont need to scale
+# if you need to scale, and need a server. 

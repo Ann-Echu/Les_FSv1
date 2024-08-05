@@ -1,6 +1,6 @@
 # ignoring venv files for now
-les_fashion
+les_fashion/
 
-
-# ignoring data files for now
-*.csv
+__pycache__/
+auth/__pycache__/
+data/
