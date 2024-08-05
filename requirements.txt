@@ -1,9 +1,10 @@
 streamlit
 pandas
 bcrypt
-sqlite3
+pymongo
 authlib
-python-dotenv
+httpx-oauth
+
 
 # maybe use mongodb, if you dont need to scale
 # if you need to scale, and need a server. 

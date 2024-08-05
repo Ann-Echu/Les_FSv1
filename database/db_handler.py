@@ -1,32 +1,38 @@
-import sqlite3
-from sqlite3 import Error
+from pymongo import MongoClient
+import streamlit as st
 
-def create_connection(db_file):
-    """ Create a database connection to the SQLite database specified by db_file """
-    conn = None
-    try:
-        conn = sqlite3.connect(db_file)
-        return conn
-    except Error as e:
-        print(e)
-    return conn
+def get_db():
+    client = MongoClient(st.secrets["MONGO_URI"])
+    db = client[st.secrets["MONGO_DB_NAME"]]
+    return db
 
-def execute_query(conn, query, params=()):
-    """ Execute a query with the provided parameters """
-    try:
-        cur = conn.cursor()
-        cur.execute(query, params)
-        conn.commit()
-    except Error as e:
-        print(e)
+def insert_user(email, username, password):
+    db = get_db()
+    users = db.users
+    user_data = {
+        "email": email,
+        "username": username,
+        "password": password
+    }
+    users.insert_one(user_data)
 
-def fetch_query(conn, query, params=()):
-    """ Fetch results from a query with the provided parameters """
-    try:
-        cur = conn.cursor()
-        cur.execute(query, params)
-        rows = cur.fetchall()
-        return rows
-    except Error as e:
-        print(e)
-    return []
+def find_user_by_email(email):
+    db = get_db()
+    users = db.users
+    user = users.find_one({"email": email})
+    return user
+
+def insert_response(email, response):
+    db = get_db()
+    responses = db.responses
+    response_data = {
+        "email": email,
+        "response": response
+    }
+    responses.insert_one(response_data)
+
+def get_responses_by_email(email):
+    db = get_db()
+    responses = db.responses
+    user_responses = responses.find({"email": email})
+    return list(user_responses)
