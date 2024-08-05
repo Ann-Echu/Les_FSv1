@@ -1,6 +1,0 @@
-# ignoring venv files for now
-les_fashion/
-
-__pycache__/
-auth/__pycache__/
-data/
