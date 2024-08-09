@@ -7,8 +7,9 @@ import datetime
 import urllib
 
 def get_db():
-    uri = st.secrets["MONGO_URI_HOST"] + st.secrets["MONGO_USER"] + urllib.parse.quote(st.secrets["MONGO_PASSWORD"]) + st.secrets["MONGO_URI_SERVER"]
-    client = MongoClient(uri, server_api=ServerApi('1'))
+    # uri = st.secrets["MONGO_URI_HOST"] + st.secrets["MONGO_USER"] + urllib.parse.quote(st.secrets["MONGO_PASSWORD"]) + st.secrets["MONGO_URI_SERVER"]
+    uri_streamlit = st.secrets["MONGO_URI_HOST"]+ st.secrets["MONGO_USER"] + urllib.parse.quote(st.secrets["MONGO_PASSWORD"]) + st.secrets["MONGO_URI_SERVER2"]
+    client = MongoClient(uri_streamlit, server_api=ServerApi('1'))
     db = client[st.secrets["MONGO_DB_NAME"]]
     return db
 
