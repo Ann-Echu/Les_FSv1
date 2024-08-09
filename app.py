@@ -43,14 +43,14 @@ def login_page():
             st.session_state['logged_in'] = True
             st.session_state['user'] = user
             st.success(f"Logged in as {user['username']}")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Invalid email or password")
 
 def logout():
     st.session_state['logged_in'] = False
     st.session_state['user'] = None
-    st.experimental_rerun()
+    st.rerun()
 
 def require_login():
     if 'logged_in' not in st.session_state or not st.session_state['logged_in']:
