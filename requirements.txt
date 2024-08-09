@@ -1,9 +1,12 @@
-streamlit==1.12.0  # Update this version based on the version you're using
-pandas==1.5.0  # Update this version based on the version you're using
-numpy==1.23.0  # Update this version based on the version you're using
+streamlit==1.12.0  # Update based on your current version of Streamlit
+pandas==1.5.0  # Update based on your current version of Pandas
+numpy==1.23.0  # Update based on your current version of NumPy
 pymongo==4.3.3  # MongoDB client for Python
 bcrypt==3.2.2  # For password hashing
-
+email-validator==1.3.0  # For email validation
+smtplib  # This is part of Python's standard library, no need to add it explicitly
+authlib==1.1.0  # For OAuth2 authentication
+email_validator==1.3.0
 
 
 # maybe use mongodb, if you dont need to scale

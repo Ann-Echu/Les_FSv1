@@ -38,4 +38,5 @@ def fix_main():
             st.experimental_rerun()
 
     elif st.session_state.page == "Recommendation":
-        recommendation_main()
+        # recommendation_main()
+        pass
