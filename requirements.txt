@@ -1,11 +1,9 @@
-streamlit
-pandas
-bcrypt
-pymongo
-authlib
-httpx-oauth
-email_validator
-streamlit_authenticator
+streamlit==1.12.0  # Update this version based on the version you're using
+pandas==1.5.0  # Update this version based on the version you're using
+numpy==1.23.0  # Update this version based on the version you're using
+pymongo==4.3.3  # MongoDB client for Python
+bcrypt==3.2.2  # For password hashing
+
 
 
 # maybe use mongodb, if you dont need to scale
