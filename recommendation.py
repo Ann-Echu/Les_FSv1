@@ -75,11 +75,9 @@ def main():
     st.header('Les Fashion Secrets')
     st.divider()
     st.markdown("""
-    Hi everyone! Thanks for taking part in our survey.
-    You're helping us out big time – our academic lives depend on it, quite literally!
-    Anyway, this is a brief survey that should only take about 6 minutes of your time.
-    We're collecting data on your fashion preferences and choices to help us build a machine
-    for our Business Intelligence Project. Thank you again for your time.
+    Hi everyone!
+                
+    Thank you for being a part of Les Fashion Secrets. Together, let’s make this Valentine’s Day and every day unforgettable! ❤️
     """)
     st.write("About you!\nYour information is highly confidential, the following information is for internal research purpose only, all information will not be shared externally.")
     st.divider()
