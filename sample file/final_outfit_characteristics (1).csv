@@ -1,0 +1,200 @@
+ID,Gender,Age,Work_Attire,Weather,Casual,Preferred_Styles,Clothing_items,Bottom_Type,Top_Type,Shoe_Type,Colors,Patterns,Fabrics,Top_Fit,Bottom_Fit
+Outfit1,Woman,Adult,Semi-Formal,Mild,Sometimes,Casual; Classy,Cardigans; Pants; Shoes,Trousers,Sweaters; N/A,Flats,Neutral,Plain,Fabrics,Straight,Loose
+Outfit2,Woman,Adult,Corporate,Cool,Rarely,Casual; Classy,Coats; Blouses; Pants; Boots,Trousers,T-shirts,Boots,Warm; Neutral,Plain,Wool; N/A,Fitted,Loose
+Outfit3,Woman,Adult,Casual,Warm,Often,Casual; Classy,Blouses; Pants; Sandals,Trousers,T-shirts,Sandals,Neutral;,Stripes,Wool; N/A,Fitted,Loose
+Outfit4,Woman,Adult,Casual,Mild,Sometimes,Casual; Classy,Shirts; Blouses; Pants; Sandals,Trousers,T-shirts; T-shirts,Sandals,Cool; Neutral,Plain,Cotton,Fitted,Loose
+Outfit5,Woman,Adult,Semi-Formal,Mild,Often,Casual; Classy,Blazers; Blouses; Pants; Sneakers,Trousers,T-shirts; N/A,Sneakers,Neutral,Stripes,Cotton; Wool,Fitted,Loose
+Outfit6,Woman,Adult,Semi-Formal,Mild,Sometimes,Casual; Classy,Blazers; Blouses; Jeans; Sandals,Trousers,T-shirts; N/A,Sandals,Neutral; Cool,Plain,Cotton; Denim,Fitted,Fitted
+Outfit7,Woman,Adult,Casual,Mild,Often,Casual; Classy,Shirts; Blouses; Pants; Sneakers,Trousers,T-shirts; T-shirts,Sneakers,Neutral,Plain,Cotton,Fitted,Loose
+Outfit8,Woman,Adult,Corporate,Warm,Sometimes,Casual; Classy,Blouses; Pants; Shoes,Trousers,T-shirts,Flats,Cool,Plain,Cotton,Fitted,Loose
+Outfit9,Woman,Adult,Corporate,Warm,Often,Casual; Classy,Blouses; Skirts; Sandals,Skirts,T-shirts,Sandals,Warm; Neutral,Plain,Cotton; N/A,Fitted,Fitted
+Outfit10,Woman,Adult,Corporate,Mild,Sometimes,Casual; Classy,Blazers; Blouses; Jeans; Shoes,Trousers,T-shirts; N/A,Flats,Neutral; Cool,Plain,Cotton; Denim,Fitted,Fitted
+Outfit11,Woman,Adult,Casual,Mild,Often,Casual; Classy,Blazers; Blouses; Jeans; Sneakers,Trousers,T-shirts; N/A,Sneakers,Neutral; Cool,Plain,Cotton; Denim,Fitted,Fitted
+Outfit12,Woman,Adult,Casual,Warm,Sometimes,Classy,Blouses; Skirts; Shoes,Skirts,T-shirts,Flats,Cool; Neutral,Florals,Cotton; Silk,Fitted,Loose
+Outfit13,Woman,Adult,Casual,Mild,Often,Classy,Shirts; Jeans; Loafers,Trousers,T-shirts,Flats,Neutral; Cool,Plain,Cotton; Denim,Loose,Loose
+Outfit14,Woman,Adult,Corporate,Mild,Sometimes,Classy,Cardigans; Blouses; Pants; Shoes,Trousers,T-shirts; Sweaters,Flats,Neutral,Stripes,Cotton; Wool,Fitted,Loose
+Outfit15,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy,Blazers; Blouses; Jeans; Sneakers,Trousers,T-shirts; N/A,Sneakers,Cool; Neutral,Plain,Cotton; Denim,Fitted,Fitted
+Outfit16,Woman,Adult,Corporate,Mild,Often,Classy,Blazers; Blouses; Pants; Shoes,Trousers,T-shirts; N/A,Flats,Neutral,Stripes,Cotton; Wool,Fitted,Loose
+Outfit17,Woman,Adult,Corporate,Mild,Sometimes,Classy,Jackets; Blouses; Pants; Boots,Trousers,T-shirts; N/A,Boots,Neutral,Plain,Cotton; Wool,Fitted,Loose
+Outfit18,Woman,Adult,Casual,Mild,Often,Classy,Coats; Blouses; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Warm; Cool,Plain,Cotton; Denim,Loose,Loose
+Outfit19,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy,Blazers; Shirts; Jeans; Boots,Trousers,T-shirts; N/A,Boots,Cool,Stripes,Cotton; Denim,Fitted,Fitted
+Outfit20,Woman,Adult,Casual,Warm,Sometimes,Classy,Shirts; Pants; Sandals,Trousers,T-shirts,Sandals,Cool; Neutral,Stripes,Cotton; N/A,Loose,Loose
+Outfit21,Woman,Adult,Corporate,Cool,Rarely,Classy,Jackets; Blouses; Pants; Heels,Trousers,T-shirts; N/A,Heels,Neutral,Plain,Wool; Silk,Fitted,Loose
+Outfit22,Woman,Adult,Corporate,Cool,Sometimes,Classy,Coats; Sweaters; Shirts; Pants,Trousers,Sweaters; T-shirts; N/A,Flats,Cool,Plain,Wool,Loose,Loose
+Outfit23,Woman,Adult,Corporate,Mild,Sometimes,Classy,Blazers; Shirts; Pants; Heels,Trousers,T-shirts; N/A,Heels,Cool; Neutral,Stripes,Cotton; Wool,Fitted,Loose
+Outfit24,Woman,Adult,Corporate,Cool,Sometimes,Classy,Coats; Shirts; Pants; Heels,Trousers,T-shirts; N/A,Heels,Neutral,Stripes,Wool; Cotton,Loose,Fitted
+Outfit25,Woman,Adult,Corporate,Mild,Often,Classy,Blazers; Blouses; Pants; Sneakers,Trousers,T-shirts; N/A,Sneakers,Neutral,Stripes,Cotton; Wool,Fitted,Fitted
+Outfit26,Woman,Adult,Casual,Warm,Often,Casual,Blazers; Sports_bras; Leggings; Sneakers,Trousers,N/A,Sneakers,Neutral,Plain,Cotton,Fitted,Tight
+Outfit27,Woman,Adult,Casual,Cool,Often,Casual,Hoodies; Skirts; Sneakers,Skirts,Sweaters,Sneakers,Neutral; Cool,Plain,Wool; Denim,Loose,Loose
+Outfit28,Woman,Adult,Casual,Warm,Often,Casual,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool,Plain,Cotton; Denim,Loose,Loose
+Outfit29,Woman,Adult,Casual,Warm,Often,Casual,T-shirts; Jeans; Heels,Trousers,T-shirts,Heels,Warm; Cool,Stripes,Cotton; Denim,Loose,Loose
+Outfit30,Woman,Adult,Casual,Warm,Often,Casual,T-shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral ,Plaids,Cotton; Wool,Loose,Fitted
+Outfit31,Woman,Adult,Casual,Mild,Often,Casual,T-shirts; Jeans; Heels,Trousers,T-shirts,Heels,Neutral; Cool,Plain,Cotton; Denim,Loose,Fitted
+Outfit32,Woman,Adult,Casual,Warm,Often,Casual,T-shirts; Jeans; Heels,Trousers,T-shirts,Heels,Neutral; Cool,N/A,Cotton; Denim,Loose,Loose
+Outfit33,Woman,Adult,Semi-Formal,Cool,Sometimes,Classy,Sweaters; Shirts; Pants; Boots,Trousers,Sweaters; T-shirts,Boots,Neutral,Stripes,Wool; Cotton,Loose,Loose
+Outfit34,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy,Shirts; Jeans; Heels,Trousers,T-shirts,Heels,Neutral; Cool,Plain,Cotton; Denim,Loose,Fitted
+Outfit35,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy,Shirts; Pants; Heels,Trousers,T-shirts,Heels,Neutral,Stripes,Cotton; Wool,Loose,Loose
+Outfit36,Woman,Adult,Casual,Mild,Often,Casual,Shirts; Jeans; Shoes,Trousers,T-shirts,Flats,Cool,Plain,Denim,Loose,Loose
+Outfit37,Woman,Adult,Casual,Warm,Often,Casual,Shirts; Blouses; Jeans; Heels,Trousers,T-shirts; T-shirts,Heels,Warm; Cool,Plain,Cotton; Denim,Loose,Fitted
+Outfit38,Woman,Adult,Casual,Warm,Sometimes,Classy,Shirts; Jeans; Heels,Trousers,T-shirts,Heels,Cool; Neutral,Stripes,Cotton; Denim,Loose,Fitted
+Outfit39,Woman,Adult,Semi-Formal,Cool,Sometimes,Classy,Shirts; Jeans; Heels,Trousers,T-shirts,Heels,Neutral; Cool,Plain,Cotton; Denim,Loose,Fitted
+Outfit40,Woman,Adult,Corporate,Mild,Sometimes,Classy,Shirts; Pants; Sandals,Trousers,T-shirts,Sandals,Cool; Neutral,Plain,Cotton; Wool,Straight,Loose
+Outfit41,Woman,Adult,Casual,Warm,Often,Casual; Classy,Blouses; Skirts,Skirts,T-shirts,N/A,Neutral,Plain,Denim; Cotton,Fitted,Fitted
+Outfit42,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy,T-shirts; Pants; Sandals,Trousers,T-shirts,Sandals,Neutral,Plain,Cotton,Tight,Straight
+Outfit43,Man,Adult,Casual,Warm,Often,Laidback; Casual,Shirts; Shorts; Shoes,Shorts,T-shirts,Flats,Neutral ,Plain,Cotton,Straight,Straight
+Outfit44,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy; Streetwear,T-shirts; Pants; Blazers; Sneakers,Trousers,T-shirts,Sneakers,Neutral ,Plain,Cotton; Wool,Fitted,Straight
+Outfit45,Woman,YoungAdult,Semi-Formal,Mild,Sometimes,Classy; Streetwear,T-shirts; Pants; Blazers; Sneakers,Trousers,T-shirts,Sneakers,Neutral,Plain,Cotton; Wool,Fitted,Straight
+Outfit46,Woman,Adult,Casual,Warm,Sometimes,Classy; Sexy,Dresses,N/A,N/A,N/A,Neutral ,Plain,Cotton,Loose,Loose
+Outfit47,Woman,YoungAdult,Semi-Formal,Mild,Rarely,Classy; Showy,Dresses; Jeans; Heels,Trousers,N/A,Heels,Cool ,Plain,Denim,Loose,Fitted; Loose
+Outfit48,Woman,YoungAdult,Casual,Warm,Often,Casual; Laidback; Streetwear,Shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Warm; Neutral,Stripes,Cotton,Loose,Fitted
+Outfit49,Woman,Senior,Casual,Cold,Often,Casual; Laidback,T-shirts; Leggings; Jackets; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Fitted,Tight
+Outfit50,Woman,YoungAdult,Casual,Warm,Often,Casual; Bohemian,Blouses; Pants; Sandals,Trousers,T-shirts,Sandals,Warm; Neutral,Plain,Cotton,Loose,Fitted
+Outfit51,Woman,Adult,Casual,Mild,Often,Casual; Streetwear,T-shirts; Jeans; Shoes,Trousers,T-shirts,Flats,Neutral; Cool ,Stripes,Cotton; Denim,Fitted,Loose
+Outfit52,Woman,YoungAdult,Semi-Formal,Mild,Sometimes,Classy; Formal,Shirts; Jeans; Athletic_tops; Flats,Trousers,T-shirts,Flats,Warm; Neutral ,Plain,Cotton; Denim,Loose,Straight
+Outfit53,Woman,YoungAdult,Corporate,Mild,Rarely,Classy; Formal,Blouses; Pants; Heels,Trousers,T-shirts,Heels,Neutral ,Plain,Cotton,Fitted,Fitted
+Outfit54,Woman,Adult,Casual,Warm,Sometimes,Colorful; Streetwear; Showy,Shirts; Jeans; Loafers,Trousers,N/A,Flats,Warm; Cool ,Florals,Denim,Fitted,Loose
+Outfit55,Woman,Adult,Casual,Mild,Sometimes,Classy; Bohemian,Blouses; Jeans; Sandals,Trousers,T-shirts,Sandals,Neutral; Warm ,Plain,Cotton; Denim,Loose,Loose
+Outfit56,Woman,Adult,Casual,Warm,Sometimes,Casual; Laidback,T-shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit57,Woman,YoungAdult,Casual,Mild,Often,Casual; Laidback,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Fitted,Fitted
+Outfit58,Woman,YoungAdult,Casual,Cold,Often,Casual; Showy,Dresses; Boots,N/A,N/A,Boots,Neutral ,Plain,Cotton,Tight,Loose
+Outfit59,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback; Streetwear,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral ,Plain,Cotton; Denim,Fitted,Straight
+Outfit60,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback,Shirts; Skirts; Sandals,Skirts,T-shirts,Sandals,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit61,Woman,Adult,Casual,Warm,Often,Casual; Laidback,T-shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Neutral,Plain,Cotton,Fitted,Straight
+Outfit62,Woman,Adult,Casual,Warm,Often,Casual; Streetwear,Shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Fitted,Straight
+Outfit63,Woman,Adult,Semi-Formal,Mild,Sometimes,Classy; Streetwear,T-shirts; Pants; Blazers; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton,Fitted,Straight
+Outfit64,Woman,YoungAdult,Casual,Mild,Often,Casual; Laidback; Bohemian,T-shirts; Skirts; Sandals,Skirts,T-shirts,Sandals,Neutral,Plain,Cotton,Fitted,Fitted
+Outfit65,Woman,Adult,Casual,Warm,Sometimes,Casual; Streetwear,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool,Plain,Cotton; Denim,Fitted,Straight
+Outfit66,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback,Shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool,Plain,Cotton,Fitted,Straight
+Outfit67,Woman,Adult,Casual,Mild,Often,Casual; Laidback,Shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool,Plain,Cotton; Denim,Fitted,Straight
+Outfit68,Woman,Adult,Casual,Warm,Often,Casual; Laidback; Streetwear,Shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit69,Woman,Adult,Casual,Warm,Often,Casual; Laidback; Streetwear,T-shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral,Plain,Cotton,Fitted,Fitted
+Outfit70,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Formal,Shirts; Skirts; Heels,Skirts,T-shirts,Heels,Warm; Neutral ,Plain,Cotton,Fitted,Fitted
+Outfit71,Woman,Adult,Casual,Mild,Often,Casual; Laidback,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Fitted,Straight
+Outfit72,Woman,Adult,Casual,Warm,Often,Casual; Laidback,Shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Neutral; Warm ,Plain,Cotton,Fitted,Straight
+Outfit73,Woman,Adult,Casual,Warm,Often,Casual; Laidback,Shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Fitted,Straight
+Outfit74,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy,Shirts; Skirts; Heels,Skirts,T-shirts,Heels,Warm; Neutral,Plain,Cotton,Fitted,Fitted
+Outfit75,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback; Streetwear,Shirts; Skirts; Sandals,Skirts,T-shirts,Sandals,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit76,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback,Shirts; Skirts; Sandals,Skirts,T-shirts,Sandals,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit77,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback,T-shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit78,Woman,Adult,Casual,Mild,Sometimes,Casual; Laidback,T-shirts; Skirts; Sneakers,Skirts,T-shirts,Sneakers,Neutral; Warm ,Plain,Cotton,Fitted,Fitted
+Outfit79,Woman,YoungAdult,Casual,Mild,Often,Casual; Streetwear,T-shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Neutral,Plain,Cotton,Loose,Fitted
+Outfit80,Woman,YoungAdult,Casual,Warm,Often,Casual; Streetwear,T-shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Neutral ,Plain,Cotton,Loose,Fitted
+Outfit81,Woman,YoungAdult,Casual,Warm,Often,Casual; Streetwear,T-shirts; Shorts; Sneakers,Shorts,T-shirts,Sneakers,Neutral,Plain,Cotton,Loose,Fitted
+Outfit82,Woman,YoungAdult,Casual,Warm,Sometimes,Classy; Laidback,Athletic_tops; Shirts; Leggings; Boots,Trousers,Tanks,Boots,Neutral,Plaids,Cotton; N/A,Tight,Tight
+Outfit83,Woman,YoungAdult,Casual,Warm,Often,Casual; Streetwear,Shirts; Athletic_tops; Shorts; Sandals,Shorts,Tanks,Sandals,Cool,Plain,Cotton; N/A,Tight,Loose
+Outfit84,Woman,YoungAdult,Casual,Cold,Often,Grungy; Laidback,Hoodies; Jackets; Leggings; Sneakers,Trousers,Sweaters,Sneakers,Neutral,Plain,Cotton; N/A; Faux Leather,Loose,Tight
+Outfit85,Woman,YoungAdult,Casual,Warm,Often,Sporty; Casual,T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Cool; Warm,Plain,Cotton; Denim,Tight,Loose
+Outfit86,Woman,YoungAdult,Casual,Warm,Often,Sporty; Streetwear,Athletic_tops; Shirts; Shorts; Sneakers,Shorts,Tanks,Sneakers,Cool; Neutral,Plain,Cotton; N/A,Tight,Tight
+Outfit87,Woman,YoungAdult,Casual,Warm,Often,Classy; Laidback,Athletic_tops; Cardigans; Jeans; Sandals,Trousers,Tanks,Sandals,Neutral,Plain,Cotton; N/A,Tight,Straight
+Outfit88,Woman,YoungAdult,Casual,Warm,Often,Classy; Laidback,Athletic_tops; Cardigans; Skirts; Sneakers,Skirts,Tanks,Sneakers,Neutral,Plain,Cotton; N/A,Tight,Loose
+Outfit89,Woman,YoungAdult,Casual,Cold,Sometimes,Classy; Laidback,Athletic_tops; Cardigans; Jeans; Sandals,Trousers,Tanks,Sandals,Neutral,Plain,Cotton; Denim,Tight,Loose
+Outfit90,Woman,YoungAdult,Casual,Cold,Sometimes,Classy; Showy,Blouses; Coats; Jeans; Boots,Trousers,Tanks,Boots,Warm; Neutral,Plain,N/A; Denim,Tight,Straight
+Outfit91,Woman,YoungAdult,Casual,Warm,Often,Classy; Laidback,Jumpsuits; Cardigans; Sneakers,N/A,Tanks,Sneakers,Neutral,Plain,N/A,Tight,Tight
+Outfit92,Woman,YoungAdult,Casual,Cold,Sometimes,Grungy; Streetwear,Shirts; Jackets; Skirts; Boots,Skirts,T-shirts,Boots,Neutral,Plaids,Cotton; Faux Leather,Loose,Loose
+Outfit93,Woman,YoungAdult,Casual,Cold,Sometimes,Grungy; Streetwear,Athletic_tops; Blazers; Skirts; Loafers,Skirts,Tanks,Flats,Neutral,Plaids,Cotton; Faux Leather,Tight,Loose
+Outfit94,Woman,YoungAdult,Corporate,Warm,Rarely,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit95,Woman,YoungAdult,Corporate,Warm,Rarely,Classy; Showy,Dresses; Heels,N/A,Tanks,Heels,Warm,Plain,N/A,Tight,Tight
+Outfit96,Woman,YoungAdult,Corporate,Warm,Rarely,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit97,Woman,YoungAdult,Corporate,Warm,Rarely,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit98,Woman,YoungAdult,Corporate,Warm,Rarely,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit99,Woman,YoungAdult,Semi-Formal,Cold,Sometimes,Classy; Laidback,Shirts; Athletic_tops; Jeans; Boots,Trousers,T-shirts,Boots,Neutral,Plain,Cotton,Fitted,Straight
+Outfit100,Woman,YoungAdult,Casual,Cold,Sometimes,Classy; Laidback,Sweaters; Skirts; Boots,Skirts,Sweaters,Boots,Neutral,Plaids,Cotton; N/A,Loose,Loose
+Outfit101,Woman,Adult,Corporate,Warm,Rarely,Classy; Sexy,Athletic_tops; Pants; Heels,Trousers,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit102,Woman,Adult,Corporate,Warm,Rarely,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit103,Woman,Adult,Corporate,Warm,Rarely,Classy; Showy,Dresses; Heels,N/A,Tanks,Heels,Warm,Plain,N/A,Tight,Tight
+Outfit104,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Sexy,Dresses; Heels,N/A,Tanks,Heels,Neutral,Plain,N/A,Tight,Tight
+Outfit105,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Laidback,Blouses; Pants; Heels,Trousers,Tanks,Heels,Neutral,Plain,N/A,Tight,Loose
+Outfit106,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Laidback,Blazers; Athletic_tops; Skirts; Heels,Skirts,Tanks,Heels,Cool; Warm,Plain,Cotton; N/A,Tight,Tight
+Outfit107,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Blouses; Pants; Heels,Trousers,Tanks,Heels,Neutral,Plain,N/A,Loose,Tight
+Outfit108,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Blazers; Blouses; Shorts; Heels,Shorts,Tanks,Heels,Cool; Warm,Plain,Cotton; N/A,Tight,Tight
+Outfit109,Woman,Adult,Casual,Warm,Often,Laidback; Casual,Blouses; Skirts; Heels,Skirts,Tanks,Heels,Warm; Neutral,Plain,Cotton; N/A,Loose,Tight
+Outfit110,Woman,Adult,Casual,Warm,Often,Laidback; Casual,Sweaters; Shorts; Heels,Shorts,Sweaters,Heels,Cool; Warm,Plain,Cotton; N/A,Loose,Tight
+Outfit111,Woman,Adult,Casual,Warm,Often,Showy; Casual,Blazers; Blouses; Pants; Heels,Trousers,Tanks,Heels,Warm; Neutral,Plain,Cotton; Denim,Tight,Loose
+Outfit112,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Blouses; Pants; Heels,Trousers,T-shirts,Heels,Warm; Neutral,Plain,Cotton; N/A,Loose,Loose
+Outfit113,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Coats; Blouses; Pants; Heels,Trousers,Tanks,Heels,Warm; Neutral,Plain,Cotton; N/A,Loose,Loose
+Outfit114,Woman,Adult,Semi-Formal,Cold,Sometimes,Classy; Laidback,Coats; Blouses; Pants; Sneakers,Trousers,Sweaters,Sneakers,Cool; Warm,Plain,Wool; Cotton,Loose,Loose
+Outfit115,Woman,Adult,Semi-Formal,Cold,Sometimes,Classy; Showy,Coats; Blouses; Pants; Boots,Trousers,Sweaters,Boots,Cool; Warm,Plain,Wool; Cotton,Loose,Loose
+Outfit116,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Blazers; Shirts; Pants; Heels,Trousers,T-shirts,Heels,Cool; Warm,Plain,Cotton; N/A,Loose,Loose
+Outfit117,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Dresses; Heels,N/A,N/A,Heels,Warm,Plain,Cotton; N/A,Loose,Loose
+Outfit118,Woman,Adult,Semi-Formal,Warm,Sometimes,Classy; Showy,Blazers; Dresses; Boots,N/A,N/A,Boots,Warm; Neutral,Plain,Cotton; N/A,Loose,Loose
+Outfit119,Woman,Adult,Casual,Cold,Often,Classy; Showy,Sweaters; Pants; Heels,Trousers,Sweaters,Heels,Cool; Warm,Plain,Wool; Cotton,Loose,Loose
+Outfit120,Woman,Adult,Casual,Warm,Often,Classy; Showy,Sweaters; Skirts; Heels,Skirts,Sweaters,Heels,Cool; Warm,Plain,Wool; Cotton,Loose,Loose
+Outfit121,Woman,Adult,Corporate,Warm,Rarely,Classy; Showy,Dresses; Heels,N/A,Tanks,Heels,Warm,Plain,N/A,Tight,Tight
+Outfit122,Man,Adult,Semi-Formal,Cold,Rarely,Classy; Colorful,Blazers; Trousers; Loafers,Trousers,N/A,Flats,Warm; Cool,Plain,Wool; Cotton,Fitted,Fitted
+Outfit123,Man,Adult,Casual,Warm,Often,Casual; Colorful,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Warm; Cool,Plain,Cotton,Loose,Loose
+Outfit124,Man,Adult,Casual,Cold,Often,Laidback,Athletic_tops; T-shirts; Trousers; Loafers,Trousers,Tanks; T-shirts,Flats,Neutral,Plain,Wool; Cotton,Loose,Loose
+Outfit125,Man,Adult,Casual,Cold,Often,Colorful; Laidback,Sweaters; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit126,Man,Adult,Casual,Warm,Often,Colorful; Laidback,T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Cool,Plain,Cotton,Loose,Loose
+Outfit127,Man,Adult,Semi-Formal,Cold,Rarely,Classy; Colorful,Blazers; Trousers; Sneakers,Trousers,N/A,Sneakers,Warm,Plain,Wool; Cotton,Fitted,Loose
+Outfit128,Man,Adult,Semi-Formal,Cold,Rarely,Classy; Formal,Blazers; Trousers,Trousers,N/A,N/A,Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit129,Man,Adult,Casual,Cold,Often,Laidback; Casual,Jackets; Trousers; Sneakers,Trousers,N/A; Sweaters,Sneakers,Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit130,Man,Adult,Casual,Warm,Often,Casual,Shirts; Trousers,Trousers,T-shirts,N/A,Warm; Cool,Stripes,Cotton,Loose,Loose
+Outfit131,Man,Adult,Casual,Warm,Often,Colorful; Laidback,Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Warm; Cool,Florals,Cotton,Loose,Loose
+Outfit132,Man,Adult,Casual,Warm,Often,Laidback; Casual,Sweaters; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit133,Man,Adult,Semi-Formal,Cool,Rarely,Classy,Cardigans; Trousers; Loafers,Trousers,Sweaters,Flats,Warm; Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit134,Man,Adult,Casual,Cold,Often,Casual; Streetwear,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Warm; Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit135,Man,Adult,Casual,Cold,Often,Laidback; Casual,Cardigans; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Warm; Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit136,Man,Adult,Casual,Warm,Often,Casual; Laidback,Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Warm; Cool,N/A,Cotton,Loose,Loose
+Outfit137,Man,Adult,Casual,Warm,Often,Casual; Laidback,Shirts; Trousers; Boots,Trousers,T-shirts,Boots,Warm,Plain,Cotton,Loose,Loose
+Outfit138,Man,Adult,Casual,Cool,Often,Casual; Streetwear,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Warm; Cool,Plain,Wool; Cotton,Loose,Loose
+Outfit139,Man,Adult,Casual,Warm,Often,Laidback; Casual,T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Neutral,Plain,Cotton,Loose,Loose
+Outfit140,Man,Adult,Casual,Cool,Often,Casual; Streetwear,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Neutral,Plain,"Wool, Cotton",Loose,Loose
+Outfit141,Man,Adult,Casual,Warm,Often,Laidback; Casual,Sweaters; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Neutral,Plain,"Wool, Cotton",Loose,Loose
+Outfit142,Man,Adult,Casual,Warm,Often,Laidback; Casual,Sweaters; Trousers,Trousers,Sweaters,N/A,Warm,Plain,"Wool, Cotton",Loose,Loose
+Outfit143,Man,Adult,Casual,Warm,Often,Casual; Laidback,Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Warm; Cool,Plain,Cotton,Loose,Loose
+Outfit144,Man,Adult,Casual,Warm,Often,Casual; Laidback,T-shirts; Trousers; Boots,Trousers,T-shirts,Boots,Cool,Plain,Cotton,Loose,Loose
+Outfit145,Man,Adult,Casual,Warm,Often,Laidback; Casual,Sweaters; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Neutral,Plain,"Wool, Cotton",Loose,Loose
+Outfit146,Man,Adult,Casual,Warm,Often,Casual; Laidback,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Cool,Plain,Cotton,Loose,Loose
+Outfit147,Man,Adult,Casual,Cool,Often,Laidback; Casual,Coats; Trousers; Sneakers,Trousers,N/A,Sneakers,Cool,Plain,"Wool, Cotton",Loose,Loose
+Outfit148,Man,Adult,Casual,Warm,Often,Laidback; Casual,T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Neutral,Plain,Cotton,Loose,Loose
+Outfit149,Man,YoungAdult,Casual,Warm,Often,Casual; Laidback,Cardigans; Trousers; Sneakers,Trousers,Sweaters,Sneakers,Warm; Cool,Plain,"Wool, Cotton",Loose,Loose
+Outfit150,Man,YoungAdult,Casual,Warm,Often,Laidback; Casual,Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Warm; Cool,N/A,Cotton,Loose,Loose
+Outfit151,Man,YoungAdult,Casual,Warm,Often,Laidback; Casual,T-shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Neutral,Plain,Cotton,Loose,Loose
+Outfit152,Man,YoungAdult,Casual,Cool,Often,Casual; Streetwear,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Warm; Cool,Plain,"Wool, Cotton",Loose,Loose
+Outfit153,Woman,YoungAdult,Casual,Cool,Often,Casual; Laidback,Blazers; Trousers; Sneakers,Trousers,N/A,Sneakers,Cool,Plain,"Wool, Cotton",Loose,Loose
+Outfit154,Man,YoungAdult,Casual,Cool,Often,Laidback; Casual,Jackets; Trousers; Sneakers,Trousers,N/A,Sneakers,Neutral,Plain,"Wool, Cotton",Loose,Loose
+Outfit155,Man,YoungAdult,Semi-Formal,Cool,Rarely,Classy,Blazers; Trousers; Loafers,Trousers,N/A,Flats,Cool,Stripes,"Wool, Cotton",Fitted,Fitted
+Outfit156,Man,YoungAdult,Casual,Warm,Often,Casual; Laidback,Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Warm; Cool,Plain,Cotton,Loose,Loose
+Outfit157,Woman,YoungAdult,Corporate,Cool,Rarely,Classy,Coats; Trousers; Heels,Trousers,N/A,Heels,Neutral,Plain,"Wool, Cotton",Fitted,Fitted
+Outfit158,Woman,YoungAdult,Semi-Formal,Cool,Rarely,Classy,Blazers; Skirts; Heels,Skirts,N/A,Heels,Warm,N/A,"Wool, Cotton",Fitted,Fitted
+Outfit159,Woman,YoungAdult,Semi-Formal,Cool,Rarely,Classy; Formal,Blazers; Trousers; Heels,Trousers,N/A,Heels,Warm,Plain,"Wool, Cotton",Fitted,Fitted
+Outfit160,Woman,YoungAdult,Casual,Cool,Often,Casual; Laidback,Blazers; Trousers; Sneakers,Trousers,N/A,Sneakers,Neutral,Plain,"Wool, Cotton",Loose,Loose
+Outfit161,Woman,YoungAdult,Semi-Formal,Cool,Sometimes,Classy,Blazers; T-shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Neutral;cool,Plain,Cotton; Wool; Denim,Fitted,Loose
+Outfit162,Woman,YoungAdult,Corporate,Cool,Rarely,Classy,Blazers; Athletic_tops; Trousers; Heels,Trousers,Tanks,Heels,Neutral,Plain,Wool,Loose,Loose
+Outfit163,Woman,YoungAdult,Semi-Formal,Warm,Sometimes,Classy,Blouses; Trousers; Heels,Trousers,T-shirts,Heels,Neutral; Warm,Plain,Cotton; Wool,Loose,Loose
+Outfit164,Man,YoungAdult,Semi-Formal,Cool,Sometimes,Classy,Blazers; T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Warm; Neutral ,Plain,Wool; Cotton,Fitted,Fitted
+Outfit165,Woman,YoungAdult,Corporate,Cool,Rarely,Classy,Blazers; Shirts; Skirts; Heels,Skirts,T-shirts,Heels,Cool; Warm; Neutral,Stripes,Wool; Cotton; Faux Leather,Fitted,Fitted
+Outfit166,Woman,YoungAdult,Semi-Formal,Cool,Sometimes,Classy,Blazers; T-shirts; Trousers; Sneakers,Trousers,T-shirt,Sneakers,Neutral; Cool,Plain,Wool; Cotton,Fitted,Loose
+Outfit167,Woman,YoungAdult,Corporate,Warm,Sometimes,Classy,Blazers; Trousers; Sandals,Trousers,N/A,Sandals,Neutral,Plain,N/A,Loose,Loose
+Outfit168,Woman,YoungAdult,Semi-Formal,Cool,Sometimes,Classy,Blazers; T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Neutral,Plain,Wool; Cotton,Loose,Loose
+Outfit169,Woman,YoungAdult,Semi-Formal,Cool,Sometimes,Classy,Blazers; Shirts; Trousers; Heels,Trousers,T-shirts,Heels,Neutral; Cool,Plaids,Wool; Cotton; Denim,Fitted,Fitted
+Outfit170,Woman,YoungAdult,Semi-Formal,Warm,Sometimes,Classy,Blouses; Trousers,Trousers,T-shirts,N/A,Neutral; Cool ,Plain,N/A; Wool,Loose,Loose
+Outfit171,Woman,YoungAdult,Semi-Formal,Warm,Rarely,Classy,Shirts; Trousers; Heels,Trousers,T-shirts,Heels,Cool; Neutral,Plain,Cotton; Wool,Fitted,Loose
+Outfit172,Woman,YoungAdult,Corporate,Cool,Rarely,Classy,Coats; Shirts; Athletic_tops; Trousers; Heels,Trousers,T-shirts,Heels,Neutral,Stripes,Wool; Cotton; Wool,Fitted,Fitted
+Outfit173,Woman,YoungAdult,Semi-Formal,Warm,Sometimes,Classy,Athletic_tops; Trousers; Heels,Trousers,Tanks,Heels,Neutral ,Plain,Cotton,Fitted,Loose
+Outfit174,Woman,YoungAdult,Corporate,Cool,Rarely,Classy,Dresses,N/A,N/A,N/A,Warm ,Plain,Cotton,Fitted,Fitted
+Outfit175,Woman,Adult,Semi-Formal,Cool,Sometimes,Classy,Blazers; Shirts; Shorts; Heels,Shorts,T-shirts,Heels,Neutral,Plain,Wool; Silk; Cotton,Fitted,Fitted
+Outfit176,Man,YoungAdult,Corporate,Cool,Rarely,Classy,Blazers; Shirts; Trousers; Shoes,Trousers,T-shirts,N/A,Cool; Neutral,Plaids,Wool; Cotton,Fitted,Fitted
+Outfit177,Man,YoungAdult,Corporate,Warm,Rarely,Classy,Blazers; Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Neutral; Cool,Plain,Cotton,Fitted,Fitted
+Outfit178,Man,Adult,Corporate,Warm,Rarely,Classy,Blazers; Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Cool; Neutral ,Plain,Wool; Cotton,Fitted,Fitted
+Outfit179,Man,YoungAdult,Corporate,Cool,Rarely,Classy,Blazers; Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Cool; Neutral ,Plain,Wool; Cotton,Fitted,Fitted
+Outfit180,Man,Adult,Semi-Formal,Cool,Sometimes,Classy,Blazers; Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Cool; Neutral ,Plain,Wool; Cotton,Fitted,Fitted
+Outfit181,Man,YoungAdult,Casual,Warm,Often,Laidback,Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Neutral ,Plain,Cotton,Loose,Loose
+Outfit182,Man,Adult,Casual,Warm,Often,Laidback,Shirts; Athletic_tops; Trousers; Loafers,Trousers,T-shirts; Tanks,Flats,Neutral ,Plain,Cotton,Loose,Loose
+Outfit183,Man,Adult,Casual,Warm,Sometimes,Showy,Blazers; Trousers; Sneakers,Trousers,N/A,Sneakers,Cool; Neutral,Plain,Wool; Faux Leather,Loose,Loose
+Outfit184,Man,Adult,Corporate,Warm,Rarely,Classy,Blazers; Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Neutral Cool,Plain,Wool; Cotton; Faux Leather,Fitted,Fitted
+Outfit185,Man,Adult,Casual,Warm,Often,Laidback,Shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Cool; Neutral,Plain,Cotton,Fitted,Fitted
+Outfit186,Man,Adult,Casual,Warm,Often,Laidback,Shirts; Trousers; Loafers,Trousers,T-shirts,Flats,Warm; Neutral,Plain,Cotton; Suede,Loose,Loose
+Outfit187,Man,Adult,Casual,Warm,Often,Laidback,Shirts; T-shirts; Trousers; Sneakers,Trousers,T-shirts,Sneakers,Neutral,Plain,Cotton,Loose,Fitted
+Outfit188,Man,YoungAdult,Casual,Warm,Often,Laidback,Athletic_tops; T-shirts; Shorts; Sneakers,Shorts,Tanks; T-shirts,Sneakers,Neutral; Cool,Plain,Cotton,Loose,Loose
+Outfit189,Man,Adult,Casual,Cool,Often,Laidback,Shirts; T-shirts; Jeans; Sneakers,Trousers,T-shirts,Sneakers,Cool; Neutral ,Plain,Cotton; Denim,Loose,Loose
+Outfit190,Man,Adult,Casual,Cool,Often,Laidback,Sweaters; Jeans; Sneakers,Trousers,Sweaters,Sneakers,Cool,Plain,Wool; Denim,Loose,Loose
+Outfit191,Man,Adult,Casual,Cool,Often,Laidback,Shirts; T-shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Cool; Neutral,Plaids,Cotton,Loose,Loose
+Outfit192,Man,Adult,Casual,Cool,Often,Laidback,Jackets; T-shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Cool; Neutral,Plain,Denim; Cotton,Loose,Loose
+Outfit193,Man,Adult,Casual,Warm,Often,Classy; Laidback,T-shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Neutral ,Plain,Cotton; Wool,Loose,Fitted
+Outfit194,Man,YoungAdult,Casual,Warm,Often,Laidback; Casual,Shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Neutral; Cool ,Plain,Cotton,Straight,Loose
+Outfit195,Man,Adult,Casual,Cold,Often,Streetwear; Casual,Sweatshirts; Pants; Sneakers,Trousers,Sweatshirts,Sneakers,Warm; Neutral,Plain,Cotton,Loose,Loose
+Outfit196,Man,YoungAdult,Casual,Cold,Sometimes,Laidback; Classy,T-shirts; Pants; Sneakers,Trousers,T-shirts,Sneakers,Neutral ,Plain,Wool; Cotton,Straight,Fitted
+Outfit197,Man,YoungAdult,Casual,Cold,Often,Laidback; Classy,Sweaters; Pants; Sneakers,Trousers,Sweaters,Sneakers,Cool; Neutral,Stripes,Wool,Fitted,Fitted
+Outfit198,Man,YoungAdult,Casual,Warm,Often,Streetwear,Shirts; Jeans; Sneakers,Trousers,N/A,Sneakers,Neutral; Cool ,Plain,Cotton; Denim,Oversize,Loose
+Outfit199,Man,Adult,Casual,Cold,Sometimes,Laidback; Streetwear,Jackets; Jeans; Sneakers,Trousers,Sweaters,Sneakers,Cool; Neutral,Plaids,Wool; Cotton; Denim,Loose,Loose
