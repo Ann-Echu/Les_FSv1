@@ -1,5 +1,5 @@
 import streamlit as st
-from database.db_handler import insert_user, find_user_by_email, check_password, hash_password, update_user_survey, get_user_survey, insert_survey_response
+from database.db_handler import *
 import util  # Assuming this is a module you have for CSV saving
 
 def login_user(email, password):
@@ -24,10 +24,7 @@ def insert_survey_response(responses):
 
 def registration_page(email=None):
     st.title("Register")
-    if email:
-        st.write(f"Email: {email}")
-    else:
-        email = st.text_input("Email")
+    email = st.text_input("Email")
     name = st.text_input("Name")
     username = st.text_input("Username")
     password = st.text_input("Password", type='password')

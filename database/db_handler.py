@@ -90,7 +90,11 @@ def insert_user_survey(responses):
         st.success("Survey submitted successfully!")
 
 def hash_password(password):
-    return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    if not isinstance(password, bytes):
+        password = password.encode('utf-8')
+    return bcrypt.hashpw(password, bcrypt.gensalt())
 
 def check_password(password, hashed):
-    return bcrypt.checkpw(password.encode('utf-8'), hashed)
+    if not isinstance(password, bytes):
+        password = password.encode('utf-8')
+    return bcrypt.checkpw(password, hashed)

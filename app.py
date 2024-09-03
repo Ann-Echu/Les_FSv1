@@ -39,11 +39,11 @@ def run():
         st.sidebar.write(f"Logged in as {st.session_state['user']['username']}")
         if st.sidebar.button("Logout"):
             logout()
-    else:
-        if page == "Recommendation":
-            st.warning("You need to log in to access the Recommendation page.")
-            login_page()
-            st.stop()
+    # else:
+        # if page == "Survey":
+        #     st.warning("You need to log in to access the Survey page.")
+        #     login_page()
+        #     st.stop()
     
     # Reset the URL by clearing query params when changing the page
     def navigate_to(selected_page):
@@ -52,8 +52,8 @@ def run():
 
     page = st.sidebar.selectbox(
         "Navigate to", 
-        ["Home", "Recommendation", "Contact Us", "Privacy", "Register", "Login"],
-        index=["Home", "Recommendation", "Contact Us", "Privacy", "Register", "Login"].index(page),
+        ["Home", "Survey", "Contact Us", "Privacy", "Register", "Login"],
+        index=["Home", "Survey", "Contact Us", "Privacy", "Register", "Login"].index(page),
         on_change=lambda: navigate_to(st.session_state["page"])
     )
 
@@ -62,7 +62,7 @@ def run():
         home_main()
     elif page == "About":
         about_main()
-    elif page == "Recommendation":
+    elif page == "Survey":
         recommendation_main()
     elif page == "Contact Us":
         contact_main()
