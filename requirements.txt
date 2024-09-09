@@ -7,6 +7,9 @@ email-validator  # For email validation
 authlib  # For OAuth2 authentication
 httpx-oauth
 streamlit_authenticator
+st-pages
+fastapi
+uvicorn
 
 
 # maybe use mongodb, if you dont need to scale

@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 from collections import defaultdict
-from utils import get_user_survey_response, update_survey_response, insert_survey_response, registration_page
+from Frontend.utils import get_user_survey_response, update_survey_response, insert_survey_response, registration_page
 import logging
+import time
 
 # Configure logging
 logging.basicConfig(
@@ -37,8 +38,11 @@ class Survey:
         if self.existing_response:
             st.warning("You have already submitted the survey.")
             if st.button("Refill and Overwrite Survey"):
-                st.session_state.responses = self.existing_response  # Load existing responses if needed
-                self.reset_steps()  # Restart the survey from the beginning
+                st.session_state.responses = {} # Load existing responses if needed
+                self.reset_survey_state(self)
+                self.existing_response = None
+                self.responses = {}
+                st.rerun()
             else:
                 st.stop()
 
@@ -313,13 +317,15 @@ class Survey:
                 logging.info(st.session_state.responses)
                 if self.existing_response:
                     update_survey_response(self.user_id, st.session_state.responses)  # Update the existing response
-                    st.success("Survey responses updated successfully!")
+                    st.success("Survey responses updated successfully!", icon="✅")
                 else:
                     insert_survey_response(st.session_state.responses)  # Submit a new survey response
-                    st.success("Survey submitted successfully!")
-                    # st.switch_page("")
-                
+                    with st.spinner('Wait for it...'):
+                        time.sleep(5)
 
+                    st.success("Survey submitted successfully!", icon="✅")
+                    # st.switch_page("")
+                self.reset_survey_state
                 st.rerun()
 
             else:
@@ -344,6 +350,11 @@ class Survey:
         elif st.session_state.step == 4:
             self.step_5_fit_and_style_preferences()
 
+    def reset_survey_state(self):
+        if 'step' in st.session_state:
+            del st.session_state['step']  # Reset the step
+        if 'responses' in st.session_state:
+            del st.session_state['responses']  # Clear all previous responses
 
 
 class Recommender:

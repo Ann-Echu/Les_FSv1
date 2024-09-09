@@ -1,23 +1,20 @@
 import streamlit as st
 from database.db_handler import insert_user, find_user_by_email, check_password, hash_password
-from home import main as home_main
-from about import main as about_main
-from recommendation import main as recommendation_main
-from contactus import main as contact_main
-from privacy import main as privacy_main
-from utils import login_page, registration_page  # Import from utils.py
+from Frontend.home import main as home_main
+from Frontend.about import main as about_main
+from Frontend.recommendation import main as recommendation_main
+from Frontend.contactus import main as contact_main
+from Frontend.privacy import main as privacy_main
+from Frontend.utils import login_page, registration_page  # Import from utils.py
+from st_pages import hide_pages
 
 def logout():
     st.session_state['logged_in'] = False
     st.session_state['user'] = None
     st.query_params.clear()  # Clear the URL query params
     st.rerun()
+    # st.switch_page(login_page)
 
-def require_login():
-    if 'logged_in' not in st.session_state or not st.session_state['logged_in']:
-        st.warning("You need to log in to access this page.")
-        login_page()
-        st.stop()
 
 def run():
     st.set_page_config(layout="wide",
@@ -29,6 +26,10 @@ def run():
         st.session_state['logged_in'] = False
     if 'page' not in st.session_state:
         st.session_state['page'] = "Home"  # Default page is 'Home'
+    
+    # Hide pages based on the login state
+    if st.session_state['logged_in']:
+        hide_pages(["Login", "Register"])
 
     st.sidebar.image("static/images/logo1.png", use_column_width=True)
     

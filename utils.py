@@ -1,6 +1,7 @@
 import streamlit as st
 from database.db_handler import *
-import util  # Assuming this is a module you have for CSV saving
+import os
+import pandas as pd
 
 def login_user(email, password):
     user = find_user_by_email(email)
@@ -69,5 +70,15 @@ def submit_survey_response():
         st.session_state.responses['Email'] = st.session_state['user']['email']
         st.session_state.responses['Name'] = st.session_state['user']['name']
         insert_survey_response(st.session_state.responses)
-        util.save_to_csv(st.session_state.responses)
+        save_to_csv(st.session_state.responses)
         st.success("Survey submitted successfully!")
+
+def save_to_csv(response):
+    file_path = 'data/survey_responses03.csv'
+    df = pd.DataFrame([response])
+
+    # Check if CSV exists
+    if not os.path.isfile(file_path):
+        df.to_csv(file_path, index=False)
+    else:
+        df.to_csv(file_path, mode='a', header=False, index=False)
