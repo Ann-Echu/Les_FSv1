@@ -1,0 +1,16 @@
+streamlit  # Update based on your current version of Streamlit
+pandas # Update based on your current version of Pandas
+numpy  # Update based on your current version of NumPy
+pymongo  # MongoDB client for Python
+bcrypt  # For password hashing
+email-validator  # For email validation
+authlib  # For OAuth2 authentication
+httpx-oauth
+streamlit_authenticator
+st-pages
+fastapi
+uvicorn
+
+
+# maybe use mongodb, if you dont need to scale
+# if you need to scale, and need a server. 
