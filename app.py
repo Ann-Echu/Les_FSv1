@@ -22,16 +22,16 @@ def run():
                        page_icon="🛍️")
 
     # Initialize session state variables
-    # if 'logged_in' not in st.session_state:
-    #     st.session_state['logged_in'] = False
+    if 'logged_in' not in st.session_state:
+        st.session_state['logged_in'] = False
     if 'page' not in st.session_state:
         st.session_state['page'] = "Home"  # Default page is 'Home'
     
-    # # Hide pages based on the login state
-    # if st.session_state['logged_in']:
-    #     hide_pages(["Login", "Register"])
+    # Hide pages based on the login state
+    if st.session_state['logged_in']:
+        hide_pages(["Login", "Register"])
 
-    st.sidebar.image("logo1.png", use_column_width=True)
+    st.sidebar.image("Frontend/static/images/logo1.png", use_column_width=True)
     
     query_params = st.query_params  # Retrieve query params
     page = query_params.get('page', "Home") # Default to 'Home' if no 'page' parameter is present
