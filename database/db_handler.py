@@ -35,17 +35,7 @@ def find_user_by_email(email):
     user = user_collection.find_one({"email": email})
     return user
 
-def insert_survey_response(response):
-    db = get_db()
-    survey_collection = db['survey_responses']
-    survey_data = {
-        "user_id": response['ID'],
-        "email": response['Email'],
-        "name": response['Name'],
-        "responses": response,
-        "submitted_at": datetime.datetime.now(datetime.timezone.utc)
-    }
-    survey_collection.insert_one(survey_data)
+user_id = str(uuid.uuid4())
 
 def get_user_survey(user_id):
     db = get_db()
@@ -62,12 +52,25 @@ def update_user_survey(user_id, responses):
     }
     survey_collection.update_one({"user_id": user_id}, {"$set": update_data})
 
+# def insert_survey_response(response):
+#     db = get_db()
+#     survey_collection = db['survey_responses']
+#     survey_data = {
+#         "user_id": response['ID'],
+#         "email": response['Email'],
+#         "name": response['Name'],
+#         "responses": response,
+#         "submitted_at": datetime.datetime.now(datetime.timezone.utc)
+#     }
+#     survey_collection.insert_one(survey_data)
+
+# inserts or updates a response to the database
 def insert_user_survey(responses):
     db = get_db()
     survey_collection = db['survey_responses']
     
     # Check if the survey already exists for this user
-    existing_survey = survey_collection.find_one({"user_id": responses['ID']})
+    existing_survey = survey_collection.find_one({"email": responses['Email']})
 
     if existing_survey:
         # Update the existing survey response
@@ -75,12 +78,11 @@ def insert_user_survey(responses):
             "responses": responses,
             "updated_at": datetime.datetime.now(datetime.timezone.utc)
         }
-        survey_collection.update_one({"user_id": responses['ID']}, {"$set": update_data})
+        survey_collection.update_one({"email": responses['email']}, {"$set": update_data})
         st.success("Survey responses updated successfully!")
     else:
         # Insert a new survey response
         survey_data = {
-            "user_id": responses['ID'],
             "email": responses['Email'],
             "name": responses['Name'],
             "responses": responses,

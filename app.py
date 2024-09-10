@@ -2,10 +2,10 @@ import streamlit as st
 from database.db_handler import insert_user, find_user_by_email, check_password, hash_password
 from Frontend.home import main as home_main
 from Frontend.about import main as about_main
-from Frontend.recommendation import main as recommendation_main
+from Frontend.survey import main as survey_main
 from Frontend.contactus import main as contact_main
 from Frontend.privacy import main as privacy_main
-from Frontend.utils import login_page, registration_page  # Import from utils.py
+from Frontend.util import login_page, registration_page  # Import from utils.py
 from st_pages import hide_pages
 
 def logout():
@@ -31,7 +31,7 @@ def run():
     if st.session_state['logged_in']:
         hide_pages(["Login", "Register"])
 
-    st.sidebar.image("static/images/logo1.png", use_column_width=True)
+    st.sidebar.image("Frontend/static/images/logo1.png", use_column_width=True)
     
     query_params = st.query_params  # Retrieve query params
     page = query_params.get('page', "Home") # Default to 'Home' if no 'page' parameter is present
@@ -53,8 +53,8 @@ def run():
 
     page = st.sidebar.selectbox(
         "Navigate to", 
-        ["Home", "Survey", "Contact Us", "Privacy", "Register", "Login"],
-        index=["Home", "Survey", "Contact Us", "Privacy", "Register", "Login"].index(page),
+        ["Home", "Survey", "Contact Us", "Privacy"],
+        index=["Home", "Survey", "Contact Us", "Privacy"].index(page),
         on_change=lambda: navigate_to(st.session_state["page"])
     )
 
@@ -64,7 +64,7 @@ def run():
     elif page == "About":
         about_main()
     elif page == "Survey":
-        recommendation_main()
+        survey_main()
     elif page == "Contact Us":
         contact_main()
     elif page == "Privacy":

@@ -2,6 +2,7 @@ import streamlit as st
 from database.db_handler import *
 import os
 import pandas as pd
+import re
 
 def login_user(email, password):
     user = find_user_by_email(email)
@@ -82,3 +83,22 @@ def save_to_csv(response):
         df.to_csv(file_path, index=False)
     else:
         df.to_csv(file_path, mode='a', header=False, index=False)
+
+def is_valid_email(email):
+    """
+    This function checks if the provided email is in a valid format.
+    
+    Args:
+    email (str): The email address to validate.
+    
+    Returns:
+    bool: True if the email is valid, False otherwise.
+    """
+    # Define a regular expression for validating an email
+    email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+
+    # Use re.match to check if the email matches the regex pattern
+    if re.match(email_regex, email):
+        return True
+    else:
+        return False
