@@ -1,7 +1,6 @@
 import streamlit as st
-import pandas as pd
-from collections import defaultdict
-from Frontend.utils import get_user_survey_response, update_survey_response, insert_survey_response, registration_page
+from collections import defaultdict 
+from Frontend.util import insert_survey_response, is_valid_email
 import logging
 import time
 
@@ -19,14 +18,13 @@ class Survey:
     """
     Survey provides users with the survey questions for the algorithm
     """
-    def __init__(self, user):
-        self.user = user
-        self.user_id = st.session_state.get('user_id') if user else None # setting to None since user is not authenticated
+    def __init__(self):
         self.responses = {}
         self.step = 0
         self.total_steps = 6
         self.initialize_session_state()
-        self.existing_response = get_user_survey_response(self.user_id) if user else None  # Check if the user has an existing survey response
+
+        
 
     def initialize_session_state(self):
         if 'step' not in st.session_state:
@@ -34,17 +32,17 @@ class Survey:
         if 'responses' not in st.session_state:
             st.session_state.responses = {}
 
-    def check_existing_response(self):
-        if self.existing_response:
-            st.warning("You have already submitted the survey.")
-            if st.button("Refill and Overwrite Survey"):
-                st.session_state.responses = {} # Load existing responses if needed
-                self.reset_survey_state(self)
-                self.existing_response = None
-                self.responses = {}
-                st.rerun()
-            else:
-                st.stop()
+    # def check_existing_response(self):
+    #     if self.existing_response:
+    #         st.warning("You have already submitted the survey.")
+    #         if st.button("Refill and Overwrite Survey"):
+    #             st.session_state.responses = {} # Load existing responses if needed
+    #             self.reset_survey_state(self)
+    #             self.existing_response = None
+    #             self.responses = {}
+    #             st.rerun()
+    #         else:
+    #             st.stop()
 
     def select_items(self, item_list, prefix):
         selected_items = []
@@ -299,9 +297,8 @@ class Survey:
             if other_silhouette:
                 silhouette.append(other_silhouette) 
 
-
         if bottoms and tops and shoes and colors and fit_preferences and silhouette:
-            if st.session_state.get('logged_in', False):
+            if st.button("Next"):
                 st.session_state.responses.update({
                     'Bottom_Type': bottoms,
                     'Top_Type': tops,
@@ -309,35 +306,57 @@ class Survey:
                     'Colors': colors,
                     'Fit_Preferences': fit_preferences,
                     'Silhouette': silhouette,
-                    'Name': self.user['name'],
-                    'ID': self.user_id,
-                    'Email': self.user['email']
                 })
-                
-                logging.info(st.session_state.responses)
-                if self.existing_response:
-                    update_survey_response(self.user_id, st.session_state.responses)  # Update the existing response
-                    st.success("Survey responses updated successfully!", icon="✅")
-                else:
-                    insert_survey_response(st.session_state.responses)  # Submit a new survey response
-                    with st.spinner('Wait for it...'):
-                        time.sleep(5)
+                self.next_step()
+        
+        if st.button("Previous"):
+            self.prev_step()
 
-                    st.success("Survey submitted successfully!", icon="✅")
-                    # st.switch_page("")
-                self.reset_survey_state
+                
+    
+
+    def step_6_contact_information(self):
+        """Step where users provide their name and email"""
+        st.subheader("Step 6: Contact Information")
+
+        first_name = st.text_input("Please enter first your name:")
+        last_name = st.text_input("Please enter last your name:")
+        name = first_name + " " + last_name
+        
+        email = st.text_input("Please enter your email:")
+        
+
+
+        if st.button("Submit Survey"):
+            if not first_name and last_name:
+                st.error("Name is required")
+            elif not email:
+                st.error("Email is required")
+            elif not is_valid_email(email):
+                st.error("Invalid email format. Please enter a valid email.")
+            else:
+                st.session_state.responses['Name'] = name
+                st.session_state.responses['Email'] = email
+            
+                # Logging the responses (you can replace this with actual database insertion logic)
+                logging.info(st.session_state.responses)
+
+                
+                insert_survey_response(st.session_state.responses)
+                # Display success message
+                with st.spinner('Submitting'):
+                    time.sleep(2)
+                st.toast(f"Thank you, {name}! Your survey has been submitted successfully.", icon="✅")
+
+                time.sleep(5)
+                
+                # Optionally reset the survey state after submission
+                self.reset_survey_state()
+
                 st.rerun()
 
-            else:
-                # Call the registration page if not logged in
-                registration_page()
-                # After successful registration, the user will be logged in and the survey can be resubmitted
-
     def display(self):
-        # check if response exist, else set as none
-        if self.existing_response:
-            self.check_existing_response()  # Check and handle existing response logic
-
+        # Display Progress bar and the current step
         self.progress_bar()
         if st.session_state.step == 0:
             self.step_1_basic_information()
@@ -349,6 +368,8 @@ class Survey:
             self.step_4_fashion_profile()
         elif st.session_state.step == 4:
             self.step_5_fit_and_style_preferences()
+        elif st.session_state.step == 5:
+            self.step_6_contact_information()
 
     def reset_survey_state(self):
         if 'step' in st.session_state:
@@ -357,54 +378,12 @@ class Survey:
             del st.session_state['responses']  # Clear all previous responses
 
 
-class Recommender:
-    """
-    The class handles the recommendation of outfits
-    """
-    def __init__(self, responses):
-        self.responses = responses
-        self.outfits_df = pd.read_csv('data/final_outfit_characteristics.csv')
-        self.outfits_df = self.outfits_df.astype(str)
-
-    def recommend(self):
-        threshold = 11
-        matched_outfits = defaultdict(list)
-        outfit_attributes = set(self.outfits_df.columns.values)
-        outfit_attributes.remove("ID")
-
-        def has_match(user_value, outfit_value):
-            if type(user_value) != str or type(outfit_value) != str:
-                return False
-            user_value = set([v.strip() for v in user_value.split(";")])
-            outfit_value = set([v.strip() for v in outfit_value.split(";")])
-            return len(user_value.intersection(outfit_value)) > 0
- 
-        user_gender = self.responses.get('Gender', '')
-
-        for _, outfit_data in self.outfits_df.iterrows():
-            if outfit_data['Gender'] != user_gender:
-                continue
-
-            matched_attribute_count = 0
-            for attribute in outfit_attributes:
-                if has_match(outfit_data[attribute], self.responses.get(attribute, '')):
-                    matched_attribute_count += 1
-
-            if matched_attribute_count >= threshold:
-                matched_outfits[outfit_data["ID"]].append(outfit_data["ID"])
-
-        matched_outfit_count = len(matched_outfits)
-        table_data = [[self.responses.get('Name', 'User'), f"{matched_outfit_count} matched outfits"]]
-        st.write(table_data)
-
-
 def main():
     """
     Returns: None
     The main function for the recommendation.py class
 
     """
-    user = st.session_state.get('user', None)
     st.header('Les Fashion Secrets')
     st.divider()
     st.markdown("""
@@ -415,12 +394,8 @@ def main():
     st.write("About you!\nYour information is highly confidential, the following information is for internal research purposes only, all information will not be shared externally.")
     st.divider()
     
-    if user:
-        survey = Survey(user)
-        survey.display()
-    else:
-        survey = Survey(None)
-        survey.display()
+    survey = Survey()
+    survey.display()
 
 if __name__ == '__main__':
     
