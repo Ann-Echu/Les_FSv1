@@ -31,7 +31,7 @@ def run():
     # if st.session_state['logged_in']:
     #     hide_pages(["Login", "Register"])
 
-    st.sidebar.image("Frontend/static/images/logo1.png", use_column_width=True)
+    st.sidebar.image("logo1.png", use_column_width=True)
     
     query_params = st.query_params  # Retrieve query params
     page = query_params.get('page', "Home") # Default to 'Home' if no 'page' parameter is present
